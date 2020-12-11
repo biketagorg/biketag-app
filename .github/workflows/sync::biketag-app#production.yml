@@ -21,7 +21,7 @@ jobs:
         run: |
           git config --global user.name 'biketagorg'
           git config --global user.email 'biketagorg@gmail.com'
-          git config --global push.default 'current'
+          # git config --global push.default 'current'
 
           # "git checkout production" is unnecessary, already here by default
           git pull --unshallow  # this option is very important, you would get
@@ -31,6 +31,7 @@ jobs:
 
           git remote add upstream https://github.com/keneucker/biketag-app.git
           git fetch upstream
+          git checkout --track origin/production
           git checkout production
           git merge --no-edit upstream/production
           git push origin production
