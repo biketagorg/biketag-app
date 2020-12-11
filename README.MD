@@ -22,3 +22,11 @@ https://biketag.org
 [Sponsore this project's development](https://github.com/sponsors/KenEucker)
 
 </p>
+
+<p align="center">
+
+# Development
+
+For issues, discussions, and active development on this project visit [the Origin repository](https://github.com/KenEucker/biketag-infra) where this software is being maintained.
+
+</p>
