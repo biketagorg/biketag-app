@@ -18,7 +18,7 @@ jobs:
         run: |
           git config --global user.name 'biketagorg'
           git config --global user.email 'biketagorg@gmail.com'
-          # git config --global push.default 'current'
+          git config --global push.default 'current'
 
           # "git checkout production" is unnecessary, already here by default
           git pull --unshallow  # this option is very important, you would get
