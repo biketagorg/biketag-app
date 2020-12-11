@@ -1,0 +1,30 @@
+# .github/workflows/mergeUpstreamBranches.yml
+
+name: sync::biketag-app#production
+on:
+  schedule:
+     # actually, ~5 minutes is the highest
+     # effective frequency you will get
+    - cron:  '* * * * *'
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Merge upstream
+        run: |
+          git config --global user.name 'biketagorg'
+          git config --global user.email 'biketagorg@gmail.com'
+          git config --global push.default 'production'
+
+          # "git checkout production" is unnecessary, already here by default
+          git pull --unshallow  # this option is very important, you would get
+                                # complains about unrelated histories without it.
+                                # (but actions/checkout@v2 can also be instructed
+                                # to fetch all git depth right from the start)
+
+          git remote add upstream https://github.com/keneucker/biketag-app.git
+          git fetch upstream
+          git checkout production
+          git merge --no-edit upstream/production
+          git push origin production
