@@ -4,7 +4,10 @@ name: sync::biketag-app#production
 on:
   workflow_dispatch:
     inputs:
-      debug: false
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
   schedule:
      # actually, ~5 minutes is the highest
      # effective frequency you will get
