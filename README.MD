@@ -27,6 +27,6 @@ https://biketag.org
 
 # Development
 
-For issues, discussions, and active development on this project visit [the Origin repository](https://github.com/KenEucker/biketag-infra) where this software is being maintained.
+For issues, discussions, and active development on this project visit [the Origin repository](https://github.com/KenEucker/biketag-app) where this software is being maintained.
 
 </p>
