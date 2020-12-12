@@ -1,4 +1,4 @@
-# This repository is being developed on another account, but being housed here for the BikeTagOrg which uses the code verbatim.
+# This repository is being developed on another account and is mirrored here for use by BikeTagOrg, which uses the production code verbatim.
 
 <p align="center">
 
