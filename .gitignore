@@ -1,0 +1,7 @@
+# ignore everything
+*
+
+# except these files
+!README.MD
+!LICENSE
+!.github
